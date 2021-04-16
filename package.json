@@ -35,6 +35,8 @@
     "eslint-webpack-plugin": "^2.5.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "image-webpack-loader": "^7.0.1",
+    "img-optimize-loader": "^1.0.7",
     "mini-css-extract-plugin": "^1.4.1",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",

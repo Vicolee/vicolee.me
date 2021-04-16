@@ -63,6 +63,44 @@ module.exports = {
               name: '[name].[ext]',
             },
           },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+              },
+              // optipng.enabled: false will disable optipng
+              optipng: {
+                enabled: false,
+              },
+              pngquant: {
+                quality: [0.65, 0.90],
+                speed: 4,
+              },
+              gifsicle: {
+                interlaced: false,
+              },
+              // the webp option will enable WEBP
+              webp: {
+                quality: 75,
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|webp|git|svg|)$/i,
+        use: [
+          {
+            loader: 'img-optimize-loader',
+            options: {
+              compress: {
+                // This will take more time and get smaller images.
+                mode: 'high', // 'lossless', 'low'
+                disableOnDevelopment: true,
+              },
+            },
+          },
         ],
       },
     ],

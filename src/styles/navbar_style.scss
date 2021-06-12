@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .9rem 1.5rem 1.1rem;
+    position: sticky;
+    background-color: #101518;
+    top: 0;
+}
+
+nav span {
+    margin-left: 20px;
+}
+
+.active {
+    text-decoration: underline;
+}

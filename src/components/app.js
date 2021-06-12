@@ -2,71 +2,50 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
-import '../style.scss';
+import React, { Component } from 'react';
+import '../styles/style.scss';
 import {
-  BrowserRouter as Router, Route, NavLink, Switch,
+  BrowserRouter as Router,
+  Route, Switch,
 } from 'react-router-dom';
-import Counter from './counter';
-import Controls from './control';
+import NavBar from './navbar';
+import Home from './home';
+import Resume from './resume';
 
-const About = (props) => {
-  return <div> All there is to know about me </div>;
-};
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
 
-const Welcome = (props) => {
-  return (
-    <div>
+  // render() {
+  //   return (
+  //     <Router>
+  //       <div>
+  //         <NavBar />
+  //         <Switch>
+  //           <Route exact path="/" component={Home} />
+  //           <Route path="/home" component={Home} />
+  //           {/* <Route component={FallBack} /> */}
+  //         </Switch>
+  //       </div>
+  //     </Router>
+  //   );
+  // }
+  render() {
+    return (
       <div>
-        Welcome
+        <Router>
+          <NavBar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/resume" component={Resume} />
+          </Switch>
+        </Router>
       </div>
-      <div>
-        <Counter />
-        <Controls />
-      </div>
-    </div>
-  );
-};
-
-const Test = (props) => {
-  return (
-    <div>
-      ID: {props.match.params.id}
-    </div>
-  );
-};
-
-const FallBack = (props) => {
-  return <div>URL Not Found</div>;
-};
-
-const Nav = (props) => {
-  return (
-    <nav>
-      <ul>
-        <li><NavLink to="/" exact>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/test/id1">test id1</NavLink></li>
-        <li><NavLink to="/test/id2">test id2</NavLink></li>
-      </ul>
-    </nav>
-  );
-};
-
-const App = (props) => {
-  return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Welcome} />
-          <Route path="/about" component={About} />
-          <Route exact path="/test/:id" component={Test} />
-          <Route component={FallBack} />
-        </Switch>
-      </div>
-    </Router>
-  );
-};
+    );
+  }
+}
 
 export default App;

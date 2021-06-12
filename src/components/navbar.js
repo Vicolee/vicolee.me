@@ -22,7 +22,7 @@ class NavBar extends Component {
         <nav>
           <Link
             activeClass="active"
-            to="work-experiences-section"
+            to="work-experiences section"
             spy={true}
             smooth={true}
             offset={-70}
@@ -32,7 +32,7 @@ class NavBar extends Component {
           </Link>
           <Link
             activeClass="active"
-            to="extracurriculars-section"
+            to="extracurriculars section"
             spy={true}
             smooth={true}
             offset={-70}
@@ -42,7 +42,7 @@ class NavBar extends Component {
           </Link>
           <Link
             activeClass="active"
-            to="projects-section"
+            to="projects section"
             spy={true}
             smooth={true}
             offset={-70}

@@ -73,12 +73,15 @@ class Home extends Component {
 
   displayWork = () => {
     return (
-      <div id="work-experiences-section">
+      <div className="work-experiences section">
         <h2>Work Experiences</h2>
         <p>
           <div className="title-container">
             <div>
-              <p>Lynch Rocket Lab, Hanover, NH</p>
+              <p>
+                Lynch Rocket Lab,
+                <em> Hanover, NH</em>
+              </p>
               <p>October 2020 - February 2021</p>
             </div>
             <p>Machine Learning Research Intern</p>
@@ -96,7 +99,10 @@ class Home extends Component {
         <p>
           <div className="title-container">
             <div>
-              <p>Coinhako, Singapore</p>
+              <p>
+                Coinhako,
+                <em> Singapore</em>
+              </p>
               <p>May 2020 - July 2020</p>
             </div>
             <p>Software Engineer Intern</p>
@@ -114,7 +120,10 @@ class Home extends Component {
         <p>
           <div className="title-container">
             <div>
-              <p>DSO National Laboratories, Singapore</p>
+              <p>
+                DSO National Laboratories,
+                <em> Singapore</em>
+              </p>
               <p>January 2020 - March 2020</p>
             </div>
             <p>Machine Learning Research Intern</p>
@@ -136,12 +145,15 @@ class Home extends Component {
 
   displayExtracurriculars = () => {
     return (
-      <div id="extracurriculars-section">
+      <div className="extracurriculars section">
         <h2>Extracurriculars</h2>
         <p>
           <div className="title-container">
             <div>
-              <p>HackDartmouth, Dartmouth College</p>
+              <p>
+                HackDartmouth,
+                <em> Dartmouth College</em>
+              </p>
               <p>October 2020 - Present</p>
             </div>
             <p>Dev Lead</p>
@@ -159,7 +171,10 @@ class Home extends Component {
         <p>
           <div className="title-container">
             <div>
-              <p>DartUP, Dartmouth College</p>
+              <p>
+                DartUP,
+                <em> Dartmouth College</em>
+              </p>
               <p>December 2020 - Present</p>
             </div>
             <p>Founder</p>
@@ -175,7 +190,10 @@ class Home extends Component {
         <p>
           <div className="title-container">
             <div>
-              <p>Dartmouth Formula Racing, Dartmouth College</p>
+              <p>
+                Dartmouth Formula Racing,
+                <em> Dartmouth College</em>
+              </p>
               <p>September 2020 - January 2020</p>
             </div>
             <p>Member</p>
@@ -193,15 +211,29 @@ class Home extends Component {
 
   displayProjects = () => {
     return (
-      <div id="projects-section">
+      <div className="projects section">
         <h2>Projects</h2>
         <div className="projects-carousel-container">
           <FontAwesomeIcon icon={faAngleLeft} role="button" tabIndex="0" className="icon prev" />
           {/* <button className="prev" type="button">Prev</button> */}
           <div className="container">
             <div className="carousel">
-              <div className="item a"><img src="src/images/coinhako.png" alt="coinhako" /></div>
-              <div className="item b"><img src="src/images/dso.png" alt="dso" /></div>
+              <div className="item a">
+                <img src="src/images/coinhako.gif" alt="coinhako" />
+                <div className="project-description">
+                  <p>
+                    Coinhako Internship
+                    Created an entire project and independently engineered a telegram chatbot
+                    using Ruby and Ruby on Rails framework. The telegram chatbot scrapes cryptocurrency news articles from
+                    sources like crunchbase and sends to users respectively.
+                  </p>
+                </div>
+              </div>
+              <div className="item b">
+                <img src="src/images/dso.png" alt="dso" />
+                <div className="project-description">Hello world</div>
+
+              </div>
               <div className="item c"><img src="src/images/coinhako.png" alt="coinhako" /></div>
               <div className="item d"><img src="src/images/coinhako.png" alt="coinhako" /></div>
               <div className="item e"><img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" /></div>
@@ -221,17 +253,21 @@ class Home extends Component {
       <div id="main-section">
         {this.displayWork()}
         {this.displayExtracurriculars()}
-        {this.displayProjects()}
       </div>
     );
   }
 
   render() {
     return (
-      <div className="home">
-        {this.displayProfile()}
-        <div className="vertical-line" />
-        {this.displayMain()}
+      <div>
+        <div className="home-header">
+          {this.displayProjects()}
+        </div>
+        <div className="home">
+          {this.displayProfile()}
+          <div className="vertical-line" />
+          {this.displayMain()}
+        </div>
       </div>
     );
   }

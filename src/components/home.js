@@ -221,23 +221,47 @@ class Home extends Component {
               <div className="item a">
                 <img src="src/images/coinhako.gif" alt="coinhako" />
                 <div className="project-description">
+                  <h3>Coinhako Internship</h3>
                   <p>
-                    Coinhako Internship
                     Created an entire project and independently engineered a telegram chatbot
-                    using Ruby and Ruby on Rails framework. The telegram chatbot scrapes cryptocurrency news articles from
+                    using Ruby and Ruby on Rails framework.
+                  </p>
+                  <p>
+                    The telegram chatbot scrapes cryptocurrency news articles from
                     sources like crunchbase and sends to users respectively.
                   </p>
                 </div>
               </div>
               <div className="item b">
                 <img src="src/images/dso.png" alt="dso" />
-                <div className="project-description">Hello world</div>
-
+                <div className="project-description">
+                  <h3>DSO National Laboratories Internship</h3>
+                  <p>
+                    Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness
+                    criterion, reducing machine algorithms’ discrimination towards certain groups of people.
+                  </p>
+                  <p>
+                    Learned to navigate Linux server, and trained models using Tensorflow and Keras.
+                  </p>
+                </div>
               </div>
               <div className="item c"><img src="src/images/coinhako.png" alt="coinhako" /></div>
               <div className="item d"><img src="src/images/coinhako.png" alt="coinhako" /></div>
               <div className="item e"><img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" /></div>
-              <div className="item f"><img src="src/images/resumov.gif" alt="resumov" /></div>
+              <div className="item f">
+                <img src="src/images/resumov.gif" alt="resumov" />
+                <div className="project-description">
+                  <h3>Resumov</h3>
+                  <p>
+                    Led the creation of a web application that allows users to input content from their resume to
+                    generate a personal portfolio website.
+                  </p>
+                  <p>
+                    Built the entire backend independently, implemented image storage using Amazon S3 services, used
+                    netlify to deploy, and MongoDB as backend.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           {/* <button className="next" type="button">Next</button> */}

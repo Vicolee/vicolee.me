@@ -5,7 +5,6 @@ body, html {
 	font-size: 16px;
 	color: white;
 	background-color: #101518;
-	padding-bottom: 200px;
 }
 
 @keyframes gradient {
@@ -25,4 +24,11 @@ body, html {
     height: 100px;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.resume {
+	width: 40%;
+	height: 70%;
+	margin-left: 30%;
+	margin-right: 30%;
 }

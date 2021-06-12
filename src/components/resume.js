@@ -10,7 +10,7 @@ class Resume extends Component {
 
   render() {
     return (
-      <img src="src/images/resume.jpg" alt="resume" />
+      <img src="src/images/resume.jpg" alt="resume" className="resume" />
     );
   }
 }

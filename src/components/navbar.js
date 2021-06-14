@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-boolean-value */
@@ -8,12 +10,26 @@ import {
   NavLink, withRouter,
 } from 'react-router-dom';
 import { Link } from 'react-scroll';
+import $ from 'jquery';
 
 class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
     };
+  }
+
+  componentDidMount = () => {
+
+  }
+
+  handleClick = (id) => {
+    $(`#${id}`).css('color', '#682ae9');
+    setTimeout(() => { this.resetColor(id); }, 400);
+  }
+
+  resetColor = (id) => {
+    $(`#${id}`).css('color', 'inherit');
   }
 
   render() {
@@ -28,7 +44,7 @@ class NavBar extends Component {
             offset={-70}
             duration={500}
           >
-            <span>Experiences</span>
+            <span id="experiences" onClick={() => { this.handleClick('experiences'); }}>Experiences</span>
           </Link>
           <Link
             activeClass="active"
@@ -38,7 +54,7 @@ class NavBar extends Component {
             offset={-70}
             duration={500}
           >
-            <span>Extracurriculars</span>
+            <span id="extracurriculars" onClick={() => { this.handleClick('extracurriculars'); }}>Extracurriculars</span>
           </Link>
           <Link
             activeClass="active"
@@ -48,7 +64,7 @@ class NavBar extends Component {
             offset={-70}
             duration={500}
           >
-            <span>Projects</span>
+            <span id="projects" onClick={() => { this.handleClick('projects'); }}>Projects</span>
           </Link>
           {/* <Link exact to="/"><span>Experiences</span></NavLink> */}
           {/* <NavLink exact to="/"><span>Extracurriculars</span></NavLink>

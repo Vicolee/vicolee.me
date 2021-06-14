@@ -8,6 +8,7 @@ import '../styles/home.scss';
 import $ from 'jquery';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import OnVisible from 'react-on-visible';
 
 class Home extends Component {
   constructor(props) {
@@ -42,10 +43,13 @@ class Home extends Component {
     return (
       <div>
         <h2>Contact Me</h2>
+        <p>vicoleezy@gmail.com</p>
         <div>
           <a href="mailto:vicoleezy@gmail.com"><img src="src/images/gmail.png" alt="gmail" className="contact-icon" /></a>
           <a href="https://github.com/Vicolee"><img src="src/images/github.png" alt="github" className="contact-icon white" /></a>
           <a href="https://www.linkedin.com/in/vicolee/"><img src="src/images/linkedin.png" alt="linkedin" className="contact-icon" /></a>
+          <a href="https://www.facebook.com/vico.lzy/"><img src="src/images/facebook.png" alt="facebook" className="contact-icon" /></a>
+          <a href="https://www.instagram.com/vicoolee/"><img src="src/images/instagram.png" alt="instagram" className="contact-icon" /></a>
         </div>
       </div>
     );
@@ -57,9 +61,9 @@ class Home extends Component {
         <div id="profile-picture-container">
           <img src="src/images/vico_lee.jpg" alt="profile" id="profile-image" />
           <div>
-            <p>Vico Lee</p>
-            <p>Dartmouth College</p>
-            <p>Software Engineer & Data Scientist</p>
+            <h2>Vico Lee</h2>
+            <p>Dartmouth College (2020-2024)</p>
+            <p>Bachelor of Computer Science and Mathematics</p>
           </div>
         </div>
         <div>
@@ -73,30 +77,38 @@ class Home extends Component {
 
   displayWork = () => {
     return (
+
       <div className="work-experiences section">
         <h2>Work Experiences</h2>
-        <p>
-          <div className="title-container">
-            <div>
-              <p>
-                Lynch Rocket Lab,
-                <em> Hanover, NH</em>
-              </p>
-              <p>October 2020 - February 2021</p>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
+          <div>
+            <div className="title-container">
+              <div>
+                <p>
+                  Lynch Rocket Lab,
+                  <em> Hanover, NH</em>
+                </p>
+                <p>October 2020 - February 2021</p>
+              </div>
+              <p>Machine Learning Research Intern</p>
             </div>
-            <p>Machine Learning Research Intern</p>
+            <ul>
+              <li>
+                Conducted research on machine learning tools to extract features of the northern lights’ plasma waves.
+              </li>
+              <li>
+                Studied metrics for comparing plasma flow data collected from different satellite positions.
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              Conducted research on machine learning tools to extract features of the northern lights’ plasma waves.
-            </li>
-            <li>
-              Studied metrics for comparing plasma flow data collected from different satellite positions.
-            </li>
-          </ul>
-        </p>
-        <hr />
-        <p>
+        </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
           <div className="title-container">
             <div>
               <p>
@@ -115,9 +127,11 @@ class Home extends Component {
               Deployed a chatbot that scrapes and centralizes crypto news sources, sending users relevant crypto trading news updates.
             </li>
           </ul>
-        </p>
-        <hr />
-        <p>
+        </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
           <div className="title-container">
             <div>
               <p>
@@ -137,57 +151,68 @@ class Home extends Component {
               Learned to navigate Linux server, and trained models using Tensorflow and Keras.
             </li>
           </ul>
-        </p>
-        <hr />
+        </OnVisible>
       </div>
+
     );
   }
 
   displayExtracurriculars = () => {
     return (
       <div className="extracurriculars section">
-        <h2>Extracurriculars</h2>
-        <p>
-          <div className="title-container">
-            <div>
-              <p>
-                HackDartmouth,
-                <em> Dartmouth College</em>
-              </p>
-              <p>October 2020 - Present</p>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
+          <h2>Extracurriculars</h2>
+          <div>
+            <div className="title-container">
+              <div>
+                <p>
+                  HackDartmouth,
+                  <em> Dartmouth College</em>
+                </p>
+                <p>October 2020 - Present</p>
+              </div>
+              <p>Dev Lead</p>
             </div>
-            <p>Dev Lead</p>
+            <ul>
+              <li>
+                Conducted technical workshops for participants.
+              </li>
+              <li>
+                Secured sponsorship and assisted in marketing endeavours.
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              Conducted technical workshops for participants.
-            </li>
-            <li>
-              Secured sponsorship and assisted in marketing endeavours.
-            </li>
-          </ul>
-        </p>
-        <hr />
-        <p>
-          <div className="title-container">
-            <div>
-              <p>
-                DartUP,
-                <em> Dartmouth College</em>
-              </p>
-              <p>December 2020 - Present</p>
+        </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
+          <div>
+            <div className="title-container">
+              <div>
+                <p>
+                  DartUP,
+                  <em> Dartmouth College</em>
+                </p>
+                <p>December 2020 - Present</p>
+              </div>
+              <p>Founder</p>
             </div>
-            <p>Founder</p>
+            <ul>
+              <li>
+                Founded a club that organizes a new kind of competition where teams are given 4 months to build a
+                startup from scratch.
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              Founded a club that organizes a new kind of competition where teams are given 4 months to build a
-              startup from scratch.
-            </li>
-          </ul>
-        </p>
-        <hr />
-        <p>
+        </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
           <div className="title-container">
             <div>
               <p>
@@ -203,8 +228,7 @@ class Home extends Component {
               Programmed torque commands in C, built a firewall, and learnt to weld for the racing car.
             </li>
           </ul>
-        </p>
-        <hr />
+        </OnVisible>
       </div>
     );
   }
@@ -245,7 +269,7 @@ class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="item c"><img src="src/images/coinhako.png" alt="coinhako" /></div>
+              <div className="item c"><img src="src/images/cisco.gif" alt="recycle app" /></div>
               <div className="item d"><img src="src/images/coinhako.png" alt="coinhako" /></div>
               <div className="item e"><img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" /></div>
               <div className="item f">
@@ -289,7 +313,6 @@ class Home extends Component {
         </div>
         <div className="home">
           {this.displayProfile()}
-          <div className="vertical-line" />
           {this.displayMain()}
         </div>
       </div>

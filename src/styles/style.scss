@@ -1,10 +1,14 @@
 // adapted from https://codepen.io/P1N2O/pen/pyBNzX
 // took the gradient and color styling
 body, html {
-    font-family: "Roboto Mono";
+    // font-family: "Roboto Mono";
+	font-family: "Gothic A1";
+	font-family: "Titillium Web";
 	font-size: 16px;
 	color: white;
-	background-color: #101518;
+	// color: #682ae9; // purple
+	// background-color: #101518; // charcoal
+	background-color: #0e1212;
 }
 
 @keyframes gradient {
@@ -31,4 +35,8 @@ body, html {
 	height: 70%;
 	margin-left: 30%;
 	margin-right: 30%;
+}
+
+h2 {
+	color: #682ae9;
 }

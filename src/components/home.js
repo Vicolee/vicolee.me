@@ -55,13 +55,33 @@ class Home extends Component {
     );
   }
 
+  displaySkills = () => {
+    return (
+      <div>
+        <h2>Skills</h2>
+        <h3>Python</h3>
+        <div className="skill_row">
+          <div id="skill_row_percent_python" />
+        </div>
+        <h3>Java</h3>
+        <div className="skill_row">
+          <div id="skill_row_percent_java" />
+        </div>
+        <h3>JavaScript/HTML/CSS</h3>
+        <div className="skill_row">
+          <div id="skill_row_percent_javascript" />
+        </div>
+      </div>
+    );
+  }
+
   displayProfile = () => {
     return (
       <div id="profile-section">
         <div id="profile-picture-container">
           <img src="src/images/vico_lee.jpg" alt="profile" id="profile-image" />
           <div>
-            <h2>Vico Lee</h2>
+            <h1>Vico Lee</h1>
             <p>Dartmouth College (2020-2024)</p>
             <p>Bachelor of Computer Science and Mathematics</p>
           </div>
@@ -70,6 +90,7 @@ class Home extends Component {
           I am a Computer Science and Mathematics double major at Dartmouth College. I love the outdoors and all kinds of sports!
           Hit me up for some volleyball, frisbee, hiking, etc.
         </div>
+        {this.displaySkills()}
         {this.displayContactMe()}
       </div>
     );
@@ -77,7 +98,6 @@ class Home extends Component {
 
   displayWork = () => {
     return (
-
       <div className="work-experiences section">
         <h2>Work Experiences</h2>
         <OnVisible
@@ -312,8 +332,12 @@ class Home extends Component {
           {this.displayProjects()}
         </div>
         <div className="home">
-          {this.displayProfile()}
-          {this.displayMain()}
+          <div className="profile-container">
+            {this.displayProfile()}
+          </div>
+          <div className="main-container">
+            {this.displayMain()}
+          </div>
         </div>
       </div>
     );

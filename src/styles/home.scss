@@ -93,10 +93,41 @@
     color: rgba(255, 255, 255, 0.4) 
 }
 
+.title-container div p {
+    display: flex;
+    flex-direction: row;
+}
+
+.work-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.work-icon:hover {
+    transition: 0.4s ease;
+    font-weight: bolder !important;
+    -webkit-animation: shake 1s ease infinite;
+    -moz-animation: shake 1s ease infinite;
+    animation: shake 1s ease infinite;
+}
+
+.github {
+    background-color: white;
+    border-radius: 30px;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.testimonial {
+    color: #FFDF00;
+}
+
 p {
     font-size: 1rem;
 }
-
 
 // caurosel
   
@@ -308,8 +339,9 @@ p {
 
 }
 
-.white {
+.white-github {
     background-color: white;
+    border-radius: 20px;
 }
 
 .projects.section h2 {

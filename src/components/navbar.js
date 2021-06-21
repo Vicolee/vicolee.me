@@ -66,9 +66,16 @@ class NavBar extends Component {
           <NavLink exact to="/resume"><span>Resume</span></NavLink>
         </nav>
       );
+    } else if (this.props.history.location.pathname.includes('/file')) {
+      return (
+        <nav>
+          <NavLink exact to="/"><span>Home</span></NavLink>
+          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+        </nav>
+      );
     } else {
       return (
-        <div>Invalid route!</div>
+        <div>Invalid page!</div>
       );
     }
   }

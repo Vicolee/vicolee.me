@@ -6,9 +6,14 @@ import React, { Component } from 'react';
 import '../styles/style.scss';
 import '../styles/home.scss';
 import $ from 'jquery';
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAngleRight, faAngleLeft, faTrophy, faFileAlt, faFileCode,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OnVisible from 'react-on-visible';
+import {
+  NavLink,
+} from 'react-router-dom';
 
 class Home extends Component {
   constructor(props) {
@@ -46,7 +51,7 @@ class Home extends Component {
         <p>vicoleezy@gmail.com</p>
         <div>
           <a href="mailto:vicoleezy@gmail.com"><img src="src/images/gmail.png" alt="gmail" className="contact-icon" /></a>
-          <a href="https://github.com/Vicolee"><img src="src/images/github.png" alt="github" className="contact-icon white" /></a>
+          <a href="https://github.com/Vicolee"><img src="src/images/github.png" alt="github" className="contact-icon white-github" /></a>
           <a href="https://www.linkedin.com/in/vicolee/"><img src="src/images/linkedin.png" alt="linkedin" className="contact-icon" /></a>
           <a href="https://www.facebook.com/vico.lzy/"><img src="src/images/facebook.png" alt="facebook" className="contact-icon" /></a>
           <a href="https://www.instagram.com/vicoolee/"><img src="src/images/instagram.png" alt="instagram" className="contact-icon" /></a>
@@ -119,7 +124,7 @@ class Home extends Component {
               <div>
                 <p>
                   Lynch Rocket Lab,
-                  <em> Hanover, NH</em>
+                  <em>&nbsp; Hanover, NH</em>
                 </p>
                 <p>October 2020 - February 2021</p>
               </div>
@@ -144,7 +149,13 @@ class Home extends Component {
             <div>
               <p>
                 Coinhako,
-                <em> Singapore</em>
+                <em>&nbsp; Singapore</em>
+                <NavLink to="/file/coinhako_testimonial">
+                  <FontAwesomeIcon icon={faTrophy} role="button" tabIndex="0" className="work-icon testimonial" />
+                </NavLink>
+                <a href="https://github.com/Vicolee/news-telegram-bot">
+                  <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
+                </a>
               </p>
               <p>May 2020 - July 2020</p>
             </div>
@@ -167,7 +178,13 @@ class Home extends Component {
             <div>
               <p>
                 DSO National Laboratories,
-                <em> Singapore</em>
+                <em>&nbsp; Singapore</em>
+                <NavLink to="/file/dso_internship_report">
+                  <FontAwesomeIcon icon={faFileAlt} role="button" tabIndex="0" className="work-icon testimonial" />
+                </NavLink>
+                <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
+                  <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon testimonial" />
+                </a>
               </p>
               <p>January 2020 - March 2020</p>
             </div>

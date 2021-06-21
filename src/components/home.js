@@ -60,17 +60,27 @@ class Home extends Component {
       <div>
         <h2>Skills</h2>
         <h3>Python</h3>
-        <div className="skill_row">
-          <div id="skill_row_percent_python" />
+        <div className="skill-row">
+          <OnVisible
+            className="skill-row-percent-python"
+            percent={30}
+          />
         </div>
         <h3>Java</h3>
-        <div className="skill_row">
-          <div id="skill_row_percent_java" />
+        <div className="skill-row">
+          <OnVisible
+            className="skill-row-percent-java"
+            percent={30}
+          />
         </div>
-        <h3>JavaScript/HTML/CSS</h3>
-        <div className="skill_row">
-          <div id="skill_row_percent_javascript" />
+        <h3>Web Development: JavaScript/HTML/CSS/React</h3>
+        <div className="skill-row">
+          <OnVisible
+            className="skill-row-percent-web"
+            percent={30}
+          />
         </div>
+
       </div>
     );
   }
@@ -117,7 +127,8 @@ class Home extends Component {
             </div>
             <ul>
               <li>
-                Conducted research on machine learning tools to extract features of the northern lights’ plasma waves.
+                Conducted research on machine learning tools like edge detection neural networks to extract features
+                of the northern lights’ plasma waves.
               </li>
               <li>
                 Studied metrics for comparing plasma flow data collected from different satellite positions.
@@ -172,6 +183,29 @@ class Home extends Component {
             </li>
           </ul>
         </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
+          <div className="title-container">
+            <div>
+              <p>
+                Singapore Armed Forces
+              </p>
+              <p>January 2018 - November 2019</p>
+            </div>
+            <p>CSSCOM S1, Section Commander</p>
+          </div>
+          <ul>
+            <li>
+              Commanded a team of 4 to coordinate legal advisory services and surprise raids across 1,000+ servicemen,
+              providing support for Military Police and Special Investigation Branch.
+            </li>
+            <li>
+              Drafted mitigation pleas for servicemen who were accused of flouting military law, subjected to Summary Trial or Court Martial.
+            </li>
+          </ul>
+        </OnVisible>
       </div>
 
     );
@@ -223,7 +257,7 @@ class Home extends Component {
             </div>
             <ul>
               <li>
-                Founded a club that organizes a new kind of competition where teams are given 4 months to build a
+                Founded a program with the Magnuson Center that organizes a new kind of competition where teams are given 4 months to build a
                 startup from scratch.
               </li>
             </ul>
@@ -259,56 +293,109 @@ class Home extends Component {
         <h2>Projects</h2>
         <div className="projects-carousel-container">
           <FontAwesomeIcon icon={faAngleLeft} role="button" tabIndex="0" className="icon prev" />
-          {/* <button className="prev" type="button">Prev</button> */}
           <div className="container">
             <div className="carousel">
               <div className="item a">
                 <img src="src/images/coinhako.gif" alt="coinhako" />
-                <div className="project-description">
-                  <h3>Coinhako Internship</h3>
-                  <p>
-                    Created an entire project and independently engineered a telegram chatbot
-                    using Ruby and Ruby on Rails framework.
-                  </p>
-                  <p>
-                    The telegram chatbot scrapes cryptocurrency news articles from
-                    sources like crunchbase and sends to users respectively.
-                  </p>
-                </div>
+                <a href="https://github.com/Vicolee/news-telegram-bot">
+                  <div className="project-description">
+                    <h3>Coinhako Internship</h3>
+                    <p>
+                      Created an entire project and independently engineered a telegram chatbot
+                      using Ruby and Ruby on Rails framework.
+                    </p>
+                    <p>
+                      The telegram chatbot scrapes cryptocurrency news articles from
+                      sources like crunchbase and sends to users respectively.
+                    </p>
+                  </div>
+                </a>
               </div>
               <div className="item b">
                 <img src="src/images/dso.png" alt="dso" />
-                <div className="project-description">
-                  <h3>DSO National Laboratories Internship</h3>
-                  <p>
-                    Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness
-                    criterion, reducing machine algorithms’ discrimination towards certain groups of people.
-                  </p>
-                  <p>
-                    Learned to navigate Linux server, and trained models using Tensorflow and Keras.
-                  </p>
-                </div>
+                <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
+                  <div className="project-description">
+                    <h3>
+                      DSO National Laboratories
+                      <br />
+                      Internship
+                    </h3>
+                    <p>
+                      Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness
+                      criterion, reducing machine algorithms’ discrimination towards certain groups of people.
+                    </p>
+                    <p>
+                      Learned to navigate Linux server, and trained models using Tensorflow and Keras.
+                    </p>
+                  </div>
+                </a>
               </div>
-              <div className="item c"><img src="src/images/cisco.gif" alt="recycle app" /></div>
-              <div className="item d"><img src="src/images/coinhako.png" alt="coinhako" /></div>
-              <div className="item e"><img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" /></div>
+              <div className="item c">
+                <img src="src/images/cisco.gif" alt="recycle app" />
+                <a href="https://github.com/Vicolee/recycle-mobile-app">
+                  <div className="project-description">
+                    <h3>Cisco Webex Hackathon 2020</h3>
+                    <p>
+                      Led a team of 3 to develop a Flutter mobile app with Dart that tells you whether an object is recyclable and which recycling bin
+                      to throw it into.
+                    </p>
+                    <p>
+                      Scraped images using Flickr API and trained the neural network using Tensorflow & Keras.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="item d">
+                <img src="src/images/ibm.png" alt="ibm" />
+                <a href="https://github.com/Vicolee/chinese-restaurants-new-york">
+                  <div className="project-description">
+                    <h3>IBM Data Science Professional Certificate</h3>
+                    <p>
+                      Conducted data analysis to predict prime venues in New York for setting up Chinese restaurants using
+                      machine learning algorithms like K Nearest Neighbors, Decision Tree, Support Vector Machine,
+                      and Logistic Regression.
+                    </p>
+                    <p>
+                      Used Foursquare API to scrape data like number of likes for a venue and one hot encoded their surrounding
+                      venues as a feature vector.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div className="item e">
+                <img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" />
+                <a href="https://sites.dartmouth.edu/lynch-rocket-lab/">
+                  <div className="project-description">
+                    <h3>Lynch Rocket Lab, Dartmouth</h3>
+                    <p>
+                      Conducted research on extracting features from satellite data taken from the auroras. These features were used to compare
+                      the data taken from different satellites to predict whether the data belonged to the same northern light arc.
+                    </p>
+                    <p>
+                      Used edge detection algorithms like holistically nested edge detection and clustering algorithms like Linear Support Vector
+                      Classification to extract and engineer features for comparing different satellite data.
+                    </p>
+                  </div>
+                </a>
+              </div>
               <div className="item f">
                 <img src="src/images/resumov.gif" alt="resumov" />
-                <div className="project-description">
-                  <h3>Resumov</h3>
-                  <p>
-                    Led the creation of a web application that allows users to input content from their resume to
-                    generate a personal portfolio website.
-                  </p>
-                  <p>
-                    Built the entire backend independently, implemented image storage using Amazon S3 services, used
-                    netlify to deploy, and MongoDB as backend.
-                  </p>
-                </div>
+                <a href="https://github.com/dartmouth-cs52-21S/project-access">
+                  <div className="project-description">
+                    <h3>Resumov</h3>
+                    <p>
+                      Led a team of 5 to create a web application that allows users to input content from their resume to
+                      generate a personal portfolio website.
+                    </p>
+                    <p>
+                      Built the entire backend independently, implemented image storage using Amazon S3 services, used
+                      netlify to deploy, and MongoDB as backend.
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
-          {/* <button className="next" type="button">Next</button> */}
           <FontAwesomeIcon icon={faAngleRight} role="button" tabIndex="0" className="icon next" />
         </div>
 

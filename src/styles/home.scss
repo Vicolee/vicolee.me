@@ -1,13 +1,9 @@
 .home {
     display: flex;
     flex-direction: row;
-    padding: 5% 7.5%;
+    padding: 5% 12.5%;
     margin-bottom: 100px;
-} 
-
-// .home :nth-child(1) {
-//     width: 35%;
-// }
+}
 
 .home-header {
     padding: 5% 7.5%;
@@ -22,7 +18,7 @@
 #profile-section {
     width: 100%;
     position: sticky;
-    top: 10%;
+    top: 7%;
     padding: 20px;
     border-right: 1px solid #682ae9;
 }
@@ -161,7 +157,7 @@ p {
 }
 .d {
     transform: rotateY(180deg) translateZ(250px);
-    background: #f26522;
+    background: black;
 }
 .e {
     transform: rotateY(240deg) translateZ(250px);
@@ -318,6 +314,8 @@ p {
 
 .projects.section h2 {
     margin-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 h1 {
@@ -328,13 +326,17 @@ h2 {
     font-size: 1.6rem;
 }
 
+h3 {
+    font-size: 1rem;
+}
+
 .section {
     margin-bottom: 75px;
 }
 
 .resume-experience {
     border-bottom: 1px solid #682ae9;
-    transition: transform 2s, opacity 0.8s;
+    transition: transform 3s, opacity 3s;
     transform: translateY(25px);
     opacity: 0;
   
@@ -345,7 +347,7 @@ h2 {
 }
 
 
-.skill_row {
+.skill-row {
     width: 100%;
     background-color: lightgray;
     height: 15px;
@@ -353,33 +355,72 @@ h2 {
     position: relative;
 }
 
-#skill_row_percent_java {
+.skill-row-percent-python {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    width: 80%;
+    // background: #65ab02;
+    background: #58e6c4;
+    &.visible {
+        animation: fill-python 1.5s ease-in-out;
+    }
+}
+
+@keyframes fill-python {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 80%;
+    }
+}
+
+.skill-row-percent-java {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     border-radius: 10px;
     width: 70%;
-    background: #682ae9;
+    background: #65ab02;
+    &.visible {
+        animation: fill-java 1.5s ease-in-out;
+    }
 }
 
-#skill_row_percent_python {
+@keyframes fill-java {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 70%;
+    }
+}
+
+.skill-row-percent-web {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     border-radius: 10px;
-    width: 90%;
-    background: #682ae9;
-    animation: width 2s;
+    width: 75%;
+    background: #65ab02;
+    &.visible {
+        animation: fill-web 1.5s ease-in-out;
+    }
 }
 
-#skill_row_percent_javascript {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    border-radius: 10px;
-    width: 90%;
-    background: #682ae9;
+@keyframes fill-web {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 75%;
+    }
 }

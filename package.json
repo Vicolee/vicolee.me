@@ -57,6 +57,7 @@
     "react-fontawesome": "^1.7.1",
     "react-icons": "^4.2.0",
     "react-on-visible": "^1.6.0",
+    "react-pdf": "^5.3.0",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.8.2",

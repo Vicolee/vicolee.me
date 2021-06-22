@@ -30,7 +30,6 @@ function File(props) {
         file={`/src/files/${props.match.params.filename}.pdf`}
         onLoadSuccess={({ numPages }) => { onDocumentLoadSuccess(numPages); }}
       >
-        {/* {displayPages()} */}
         {Array.apply(null, Array(numPages))
           .map((x, i) => i + 1)
           .map((page) => {
@@ -42,9 +41,6 @@ function File(props) {
             );
           })}
       </Document>
-      {/* <p>
-        Page {pageNumber} of {numPages}
-      </p> */}
     </div>
   );
 }

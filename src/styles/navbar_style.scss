@@ -7,17 +7,19 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding: .9rem 1.5rem 1.1rem;
-    position: sticky;
+    padding: .9rem 0 0.9rem 0;
+    position: fixed;
+    right: 0;
     // background-color: #101518;
     background-color: #0e1212;
     // background-color: rgb(28, 30, 33);
-    z-index: 1000;
+    z-index: 1;
+    width: 60%;
     top: 0;
 }
 
 nav span {
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav span:hover {

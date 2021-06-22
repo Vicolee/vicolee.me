@@ -39,6 +39,10 @@ body, html {
 	animation: fadeIn ease 1.3s;
 }
 
+body {
+	margin: 0;
+}
+
 @keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
@@ -46,9 +50,17 @@ body, html {
 
 h1 {
 	// color: #682ae9;
-	color: #64ffda;
+	color: #22DDD2;
+	font-size: 3.75rem;
+	margin: 0;
 }
 
 h2 {
-	color: #682ae9;
+	// color: #682ae9;
+	color: #22DDD2;
+	font-size: 2rem;
+}
+
+p {
+	font-size: 1.25rem;
 }

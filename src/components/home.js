@@ -9,6 +9,12 @@ import $ from 'jquery';
 import {
   faAngleRight, faAngleLeft, faTrophy, faFileAlt, faFileCode,
 } from '@fortawesome/free-solid-svg-icons';
+
+import {
+  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin,
+} from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OnVisible from 'react-on-visible';
 import {
@@ -46,15 +52,25 @@ class Home extends Component {
 
   displayContactMe = () => {
     return (
-      <div>
-        <h2>Contact Me</h2>
+      <div className="contact-container">
+        {/* <h2>Contact Me</h2> */}
         <p>vicoleezy@gmail.com</p>
         <div>
-          <a href="mailto:vicoleezy@gmail.com"><img src="src/images/gmail.png" alt="gmail" className="contact-icon" /></a>
-          <a href="https://github.com/Vicolee"><img src="src/images/github.png" alt="github" className="contact-icon white-github" /></a>
-          <a href="https://www.linkedin.com/in/vicolee/"><img src="src/images/linkedin.png" alt="linkedin" className="contact-icon" /></a>
-          <a href="https://www.facebook.com/vico.lzy/"><img src="src/images/facebook.png" alt="facebook" className="contact-icon" /></a>
-          <a href="https://www.instagram.com/vicoolee/"><img src="src/images/instagram.png" alt="instagram" className="contact-icon" /></a>
+          <a href="mailto:vicoleezy@gmail.com">
+            <SiGmail className="contact-icon gmail" />
+          </a>
+          <a href="https://github.com/Vicolee">
+            <FaGithub className="contact-icon github" />
+          </a>
+          <a href="https://www.linkedin.com/in/vicolee/">
+            <FaLinkedin className="contact-icon linkedin" />
+          </a>
+          <a href="https://www.facebook.com/vico.lzy/">
+            <FaFacebookSquare className="contact-icon facebook" />
+          </a>
+          <a href="https://www.instagram.com/vicoolee/">
+            <FaInstagram className="contact-icon instagram" />
+          </a>
         </div>
       </div>
     );
@@ -124,7 +140,7 @@ class Home extends Component {
               <div>
                 <p>
                   Lynch Rocket Lab,
-                  <em>&nbsp; Hanover, NH</em>
+                  <em>&nbsp;Hanover, NH</em>
                 </p>
                 <p>October 2020 - February 2021</p>
               </div>
@@ -149,7 +165,7 @@ class Home extends Component {
             <div>
               <p>
                 Coinhako,
-                <em>&nbsp; Singapore</em>
+                <em>&nbsp;Singapore</em>
                 <NavLink to="/file/coinhako_testimonial">
                   <FontAwesomeIcon icon={faTrophy} role="button" tabIndex="0" className="work-icon testimonial" />
                 </NavLink>
@@ -178,7 +194,7 @@ class Home extends Component {
             <div>
               <p>
                 DSO National Laboratories,
-                <em>&nbsp; Singapore</em>
+                <em>&nbsp;Singapore</em>
                 <NavLink to="/file/dso_internship_report">
                   <FontAwesomeIcon icon={faFileAlt} role="button" tabIndex="0" className="work-icon testimonial" />
                 </NavLink>
@@ -241,7 +257,7 @@ class Home extends Component {
               <div>
                 <p>
                   HackDartmouth,
-                  <em> Dartmouth College</em>
+                  <em>&nbsp;Dartmouth College</em>
                 </p>
                 <p>October 2020 - Present</p>
               </div>
@@ -266,7 +282,7 @@ class Home extends Component {
               <div>
                 <p>
                   DartUP,
-                  <em> Dartmouth College</em>
+                  <em>&nbsp;Dartmouth College</em>
                 </p>
                 <p>December 2020 - Present</p>
               </div>
@@ -288,7 +304,7 @@ class Home extends Component {
             <div>
               <p>
                 Dartmouth Formula Racing,
-                <em> Dartmouth College</em>
+                <em>&nbsp;Dartmouth College</em>
               </p>
               <p>September 2020 - January 2020</p>
             </div>
@@ -423,6 +439,7 @@ class Home extends Component {
   displayMain = () => {
     return (
       <div id="main-section">
+        {this.displayProjects()}
         {this.displayWork()}
         {this.displayExtracurriculars()}
       </div>
@@ -432,12 +449,13 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="home-header">
-          {this.displayProjects()}
-        </div>
+        {/* <div className="home-header">
+        </div> */}
         <div className="home">
-          <div className="profile-container">
-            {this.displayProfile()}
+          <div className="profile">
+            <div className="profile-container">
+              {this.displayProfile()}
+            </div>
           </div>
           <div className="main-container">
             {this.displayMain()}

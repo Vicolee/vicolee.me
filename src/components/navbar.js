@@ -25,6 +25,16 @@ class NavBar extends Component {
         <nav>
           <Link
             activeClass="active"
+            to="projects section"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <span id="projects">Projects</span>
+          </Link>
+          <Link
+            activeClass="active"
             to="work-experiences section"
             spy={true}
             smooth={true}
@@ -42,16 +52,6 @@ class NavBar extends Component {
             duration={500}
           >
             <span id="extracurriculars">Extracurriculars</span>
-          </Link>
-          <Link
-            activeClass="active"
-            to="projects section"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
-          >
-            <span id="projects">Projects</span>
           </Link>
           {/* <Link exact to="/"><span>Experiences</span></NavLink> */}
           {/* <NavLink exact to="/"><span>Extracurriculars</span></NavLink>

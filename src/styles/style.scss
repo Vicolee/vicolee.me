@@ -81,3 +81,12 @@ p {
 .react-pdf__Page__annotations.annotationLayer {
 	height: 0
 }
+
+.resume-page {
+	display: flex;
+	justify-content: center;
+}
+
+.resume-page img {
+	margin-top: 5%;
+}

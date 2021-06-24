@@ -22,7 +22,8 @@ function File(props) {
     <div className="file">
       <br />
       <Document
-        file={`/src/files/${props.match.params.filename}.pdf`}
+        file="https://static1.squarespace.com/static/5c0ee8ceaa49a1ceb598befc/t/5f59921800cf8679baf2fa5d/1599705624520/Resume_Kathy+Dong.pdf"
+        // file={`/src/files/${props.match.params.filename}.pdf`}
         onLoadSuccess={({ numPages }) => { onDocumentLoadSuccess(numPages); }}
         renderAnnotationLayer="false"
         className="document"

@@ -10,7 +10,9 @@ class Resume extends Component {
 
   render() {
     return (
-      <img src="src/images/resume.jpg" alt="resume" className="resume" />
+      <div className="resume-page">
+        <img src="https://i.ibb.co/18XsNmT/resume.png" alt="resume" className="resume" />
+      </div>
     );
   }
 }

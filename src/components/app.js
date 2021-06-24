@@ -10,7 +10,6 @@ import {
 } from 'react-router-dom';
 import NavBar from './navbar';
 import Home from './home';
-import Resume from './resume';
 import File from './file';
 
 class App extends Component {
@@ -27,8 +26,8 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/resume" component={Resume} />
-            <Route path="/file/:filename" component={File} />
+            {/* <Route path="/resume" component={Resume} /> */}
+            <Route path="/files/:filename" component={File} />
           </Switch>
         </Router>
       </div>

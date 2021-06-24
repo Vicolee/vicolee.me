@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-no-duplicate-props */
@@ -11,10 +12,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
-  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin,
+  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown,
 } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
-
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OnVisible from 'react-on-visible';
 import {
@@ -78,7 +79,7 @@ class Home extends Component {
 
   displaySkills = () => {
     return (
-      <div>
+      <div className="skills-section">
         <h2>Skills</h2>
         <h3>Python</h3>
         <div className="skill-row">
@@ -101,7 +102,6 @@ class Home extends Component {
             percent={30}
           />
         </div>
-
       </div>
     );
   }
@@ -109,20 +109,27 @@ class Home extends Component {
   displayProfile = () => {
     return (
       <div id="profile-section">
-        <div id="profile-picture-container">
-          <img src="src/images/vico_lee.jpg" alt="profile" id="profile-image" />
+        <div>
+          <div id="profile-picture-container">
+            <img src="src/images/vico_lee.jpg" alt="profile" id="profile-image" />
+            <div>
+              <h1>Vico Lee</h1>
+              <p>Dartmouth College (2020-2024)</p>
+              <p>Bachelor's of Computer Science and Mathematics</p>
+            </div>
+          </div>
           <div>
-            <h1>Vico Lee</h1>
-            <p>Dartmouth College (2020-2024)</p>
-            <p>Bachelor of Computer Science and Mathematics</p>
+            I am a Computer Science and Mathematics double major at Dartmouth College. I am an aspiring software engineer, data scientist, and entrepreneur.
+            Outside of classes, I participate in hackathons and pitch competitions. I am an independent learner and believe strongly in effective communication.
+            Beyond these, I love playing sports, especially volleyball and frisbee!
+          </div>
+          <br />
+          <div>
+            Feel free to reach out to me if you want to work on projects together, play some sports together, or even just
+            to grab a cup of coffee!
           </div>
         </div>
-        <div>
-          I am a Computer Science and Mathematics double major at Dartmouth College. I love the outdoors and all kinds of sports!
-          Hit me up for some volleyball, frisbee, hiking, etc.
-        </div>
         {this.displaySkills()}
-        {this.displayContactMe()}
       </div>
     );
   }
@@ -130,115 +137,154 @@ class Home extends Component {
   displayWork = () => {
     return (
       <div className="work-experiences section">
-        <h2>Work Experiences</h2>
-        <OnVisible
-          className="resume-experience"
-          percent={20}
-        >
-          <div>
+        <div className="work-experiences-container">
+          <h2>Work Experiences</h2>
+          <OnVisible
+            className="resume-experience"
+            percent={20}
+          >
+            <div>
+              <div className="title-container">
+                <div>
+                  <p>
+                    Reality and Robotics Lab,
+                    <em>&nbsp;Hanover, NH</em>
+                  </p>
+                  <p>June 2021 - Present</p>
+                </div>
+                <p>E.E. Just Summer Intern</p>
+              </div>
+              <ul>
+                <li>
+                  E.E Just Summer Intern program is a special program at Dartmouth aimed at increasing interest in STEM fields among underrepresented groups.
+                </li>
+                <li>
+                  Conducting research to optimize information transmitted between robots underwater using 3D simulations like Gazebo.
+                </li>
+              </ul>
+            </div>
+          </OnVisible>
+          <OnVisible
+            className="resume-experience"
+            percent={20}
+          >
+            <div>
+              <div className="title-container">
+                <div>
+                  <p>
+                    Lynch Rocket Lab,
+                    <em>&nbsp;Hanover, NH</em>
+                  </p>
+                  <p>October 2020 - February 2021</p>
+                </div>
+                <p>Machine Learning Research Intern</p>
+              </div>
+              <ul>
+                <li>
+                  Conducted research on machine learning tools like edge detection neural networks to extract features
+                  of the northern lights’ plasma waves.
+                </li>
+                <li>
+                  Studied metrics for comparing plasma flow data collected from different satellite positions.
+                </li>
+              </ul>
+            </div>
+          </OnVisible>
+          <OnVisible
+            className="resume-experience"
+            percent={20}
+          >
             <div className="title-container">
               <div>
                 <p>
-                  Lynch Rocket Lab,
-                  <em>&nbsp;Hanover, NH</em>
+                  Coinhako,
+                  <em>&nbsp;Singapore</em>
+                  <NavLink to="/files/coinhako_testimonial">
+                    <FontAwesomeIcon icon={faTrophy} role="button" tabIndex="0" className="work-icon testimonial" />
+                  </NavLink>
+                  <a href="https://github.com/Vicolee/news-telegram-bot">
+                    <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
+                  </a>
                 </p>
-                <p>October 2020 - February 2021</p>
+                <p>May 2020 - July 2020</p>
+              </div>
+              <p>Software Engineer Intern</p>
+            </div>
+            <ul>
+              <li>
+                Led the design of a telegram chatbot using Ruby on Rails web framework on Postgresql database in a Linux Server.
+              </li>
+              <li>
+                Deployed a chatbot that scrapes and centralizes crypto news sources, sending users relevant crypto trading news updates.
+              </li>
+            </ul>
+          </OnVisible>
+          <OnVisible
+            className="resume-experience"
+            percent={20}
+          >
+            <div className="title-container">
+              <div>
+                <p>
+                  DSO National Laboratories,
+                  <em>&nbsp;Singapore</em>
+                  <NavLink to="/files/dso_internship_report">
+                    <FontAwesomeIcon icon={faFileAlt} role="button" tabIndex="0" className="work-icon" />
+                  </NavLink>
+                  <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
+                    <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
+                  </a>
+                </p>
+                <p>January 2020 - March 2020</p>
               </div>
               <p>Machine Learning Research Intern</p>
             </div>
             <ul>
               <li>
-                Conducted research on machine learning tools like edge detection neural networks to extract features
-                of the northern lights’ plasma waves.
+                Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness criterion, reducing machine algorithms’
+                discrimination towards certain groups of people.
               </li>
               <li>
-                Studied metrics for comparing plasma flow data collected from different satellite positions.
+                Learned to navigate Linux server, and trained models using Tensorflow and Keras.
               </li>
             </ul>
-          </div>
-        </OnVisible>
-        <OnVisible
-          className="resume-experience"
-          percent={20}
-        >
-          <div className="title-container">
-            <div>
-              <p>
-                Coinhako,
-                <em>&nbsp;Singapore</em>
-                <NavLink to="/file/coinhako_testimonial">
-                  <FontAwesomeIcon icon={faTrophy} role="button" tabIndex="0" className="work-icon testimonial" />
-                </NavLink>
-                <a href="https://github.com/Vicolee/news-telegram-bot">
-                  <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
-                </a>
-              </p>
-              <p>May 2020 - July 2020</p>
+          </OnVisible>
+          <OnVisible
+            className="resume-experience"
+            percent={20}
+          >
+            <div className="title-container">
+              <div>
+                <p>
+                  Singapore Armed Forces
+                </p>
+                <p>January 2018 - November 2019</p>
+              </div>
+              <p>CSSCOM S1, Section Commander</p>
             </div>
-            <p>Software Engineer Intern</p>
-          </div>
-          <ul>
-            <li>
-              Led the design of a telegram chatbot using Ruby on Rails web framework on Postgresql database in a Linux Server.
-            </li>
-            <li>
-              Deployed a chatbot that scrapes and centralizes crypto news sources, sending users relevant crypto trading news updates.
-            </li>
-          </ul>
-        </OnVisible>
-        <OnVisible
-          className="resume-experience"
-          percent={20}
-        >
-          <div className="title-container">
-            <div>
-              <p>
-                DSO National Laboratories,
-                <em>&nbsp;Singapore</em>
-                <NavLink to="/file/dso_internship_report">
-                  <FontAwesomeIcon icon={faFileAlt} role="button" tabIndex="0" className="work-icon testimonial" />
-                </NavLink>
-                <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
-                  <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon testimonial" />
-                </a>
-              </p>
-              <p>January 2020 - March 2020</p>
-            </div>
-            <p>Machine Learning Research Intern</p>
-          </div>
-          <ul>
-            <li>
-              Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness criterion, reducing machine algorithms’
-              discrimination towards certain groups of people.
-            </li>
-            <li>
-              Learned to navigate Linux server, and trained models using Tensorflow and Keras.
-            </li>
-          </ul>
-        </OnVisible>
-        <OnVisible
-          className="resume-experience"
-          percent={20}
-        >
-          <div className="title-container">
-            <div>
-              <p>
-                Singapore Armed Forces
-              </p>
-              <p>January 2018 - November 2019</p>
-            </div>
-            <p>CSSCOM S1, Section Commander</p>
-          </div>
-          <ul>
-            <li>
-              Commanded a team of 4 to coordinate legal advisory services and surprise raids across 1,000+ servicemen,
-              providing support for Military Police and Special Investigation Branch.
-            </li>
-            <li>
-              Drafted mitigation pleas for servicemen who were accused of flouting military law, subjected to Summary Trial or Court Martial.
-            </li>
-          </ul>
-        </OnVisible>
+            <ul>
+              <li>
+                Commanded a team of 4 to coordinate legal advisory services and surprise raids across 1,000+ servicemen,
+                providing support for Military Police and Special Investigation Branch.
+              </li>
+              <li>
+                Drafted mitigation pleas for servicemen who were accused of flouting military law, subjected to Summary Trial or Court Martial.
+              </li>
+            </ul>
+          </OnVisible>
+        </div>
+        <div className="arrow-container">
+          <Link
+            activeClass="active"
+            to="extracurriculars section"
+            spy
+            smooth
+            offset={-70}
+            duration={1000}
+          >
+            <FaAngleDoubleDown className="arrow-icon" />
+          </Link>
+        </div>
       </div>
 
     );
@@ -256,19 +302,20 @@ class Home extends Component {
             <div className="title-container">
               <div>
                 <p>
-                  HackDartmouth,
+                  DartUP,
                   <em>&nbsp;Dartmouth College</em>
                 </p>
-                <p>October 2020 - Present</p>
+                <p>December 2020 - Present</p>
               </div>
-              <p>Dev Lead</p>
+              <p>Founder</p>
             </div>
             <ul>
               <li>
-                Conducted technical workshops for participants.
+                Founded a program with the Magnuson Center for Entrepreneurship at Dartmouth that organizes a new kind of competition where teams are given 4 months to build a
+                startup from scratch.
               </li>
               <li>
-                Secured sponsorship and assisted in marketing endeavours.
+                Spearheading sponsorship, marketing, club recruitment, technical workshops, and competition planning efforts.
               </li>
             </ul>
           </div>
@@ -281,17 +328,19 @@ class Home extends Component {
             <div className="title-container">
               <div>
                 <p>
-                  DartUP,
+                  HackDartmouth,
                   <em>&nbsp;Dartmouth College</em>
                 </p>
-                <p>December 2020 - Present</p>
+                <p>October 2020 - Present</p>
               </div>
-              <p>Founder</p>
+              <p>Sponsorship Lead</p>
             </div>
             <ul>
               <li>
-                Founded a program with the Magnuson Center that organizes a new kind of competition where teams are given 4 months to build a
-                startup from scratch.
+                Leading a team of 10 to secure sponsorships from software firms for 600+ participants worldwide.
+              </li>
+              <li>
+                Responsible for holding workshops on campus to teach beginner developers languages like JavaScript, HTML, and CSS.
               </li>
             </ul>
           </div>
@@ -431,7 +480,18 @@ class Home extends Component {
           </div>
           <FontAwesomeIcon icon={faAngleRight} role="button" tabIndex="0" className="icon next" />
         </div>
-
+        <div className="arrow-container">
+          <Link
+            activeClass="active"
+            to="work-experiences section"
+            spy
+            smooth
+            offset={-70}
+            duration={1000}
+          >
+            <FaAngleDoubleDown className="arrow-icon" />
+          </Link>
+        </div>
       </div>
     );
   }
@@ -449,13 +509,12 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {/* <div className="home-header">
-        </div> */}
         <div className="home">
           <div className="profile">
             <div className="profile-container">
               {this.displayProfile()}
             </div>
+            {this.displayContactMe()}
           </div>
           <div className="main-container">
             {this.displayMain()}

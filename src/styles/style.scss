@@ -31,13 +31,25 @@ body, html {
     background-size: contain;
 }
 
-.resume {
-	width: 40%;
-	height: 70%;
-	margin-left: 30%;
-	margin-right: 30%;
+.file {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
 	animation: fadeIn ease 1.3s;
 }
+
+.document {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.page {
+	width: 40%;
+}
+
 
 body {
 	margin: 0;
@@ -59,8 +71,13 @@ h2 {
 	// color: #682ae9;
 	color: #22DDD2;
 	font-size: 2rem;
+	font-weight: bolder;
 }
 
 p {
 	font-size: 1.25rem;
+}
+
+.react-pdf__Page__annotations.annotationLayer {
+	height: 0
 }

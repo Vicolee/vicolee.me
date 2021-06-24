@@ -15,28 +15,25 @@ function File(props) {
   const [pageNumber, setPageNumber] = useState(1);
 
   function onDocumentLoadSuccess(numPages) {
-    // console.log(props.match.params.filename);
-    console.log('it loaded!', numPages);
     setNumPages(numPages);
   }
 
-  const displayPages = () => {
-    console.log(numPages);
-  };
-
   return (
-    <div>
+    <div className="file">
+      <br />
       <Document
         file={`/src/files/${props.match.params.filename}.pdf`}
         onLoadSuccess={({ numPages }) => { onDocumentLoadSuccess(numPages); }}
+        renderAnnotationLayer="false"
+        className="document"
       >
         {Array.apply(null, Array(numPages))
           .map((x, i) => i + 1)
           .map((page) => {
             return (
               <div>
-                <Page pageNumber={page} className="resume" />
-                <br />;
+                <Page pageNumber={page} className="page" />
+                <br />
               </div>
             );
           })}

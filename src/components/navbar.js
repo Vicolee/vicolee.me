@@ -29,7 +29,7 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1000}
           >
             <span id="projects">Projects</span>
           </Link>
@@ -39,7 +39,7 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1000}
           >
             <span id="experiences">Experiences</span>
           </Link>
@@ -49,28 +49,25 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
+            duration={1000}
           >
             <span id="extracurriculars">Extracurriculars</span>
           </Link>
-          {/* <Link exact to="/"><span>Experiences</span></NavLink> */}
-          {/* <NavLink exact to="/"><span>Extracurriculars</span></NavLink>
-              <NavLink exact to="/"><span>Projects</span></NavLink> */}
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
         </nav>
       );
-    } else if (this.props.history.location.pathname === '/resume') {
+    } else if (this.props.history.location.pathname === '/files/resume') {
       return (
         <nav>
           <NavLink exact to="/"><span>Home</span></NavLink>
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
         </nav>
       );
-    } else if (this.props.history.location.pathname.includes('/file')) {
+    } else if (this.props.history.location.pathname.includes('/files')) {
       return (
         <nav>
           <NavLink exact to="/"><span>Home</span></NavLink>
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
         </nav>
       );
     } else {

@@ -14,7 +14,7 @@ nav {
     background-color: #0e1212;
     // background-color: rgb(28, 30, 33);
     z-index: 1;
-    width: 60%;
+    width: 100%;
     top: 0;
 }
 
@@ -28,9 +28,9 @@ nav span:hover {
 }
 
 .active {
-    color: #682ae9;
+    color: #22DDD2;
     text-decoration: underline;
-    text-decoration-color: #682ae9;
+    text-decoration-color: #22DDD2;
 }
 
 #experiences {

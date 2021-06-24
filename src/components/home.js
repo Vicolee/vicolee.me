@@ -8,15 +8,10 @@ import '../styles/style.scss';
 import '../styles/home.scss';
 import $ from 'jquery';
 import {
-  faAngleRight, faAngleLeft, faTrophy, faFileAlt, faFileCode,
-} from '@fortawesome/free-solid-svg-icons';
-
-import {
-  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown,
+  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaTrophy, FaRegFileAlt, FaRegFileCode,
 } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { Link } from 'react-scroll';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import OnVisible from 'react-on-visible';
 import {
   NavLink,
@@ -200,10 +195,10 @@ class Home extends Component {
                   Coinhako,
                   <em>&nbsp;Singapore</em>
                   <NavLink to="/files/coinhako_testimonial">
-                    <FontAwesomeIcon icon={faTrophy} role="button" tabIndex="0" className="work-icon testimonial" />
+                    <FaTrophy className="work-icon testimonial" />
                   </NavLink>
                   <a href="https://github.com/Vicolee/news-telegram-bot">
-                    <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
+                    <FaRegFileCode className="work-icon" />
                   </a>
                 </p>
                 <p>May 2020 - July 2020</p>
@@ -229,10 +224,10 @@ class Home extends Component {
                   DSO National Laboratories,
                   <em>&nbsp;Singapore</em>
                   <NavLink to="/files/dso_internship_report">
-                    <FontAwesomeIcon icon={faFileAlt} role="button" tabIndex="0" className="work-icon" />
+                    <FaRegFileAlt className="work-icon" />
                   </NavLink>
                   <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
-                    <FontAwesomeIcon icon={faFileCode} role="button" tabIndex="0" className="work-icon" />
+                    <FaRegFileCode className="work-icon" />
                   </a>
                 </p>
                 <p>January 2020 - March 2020</p>
@@ -374,7 +369,7 @@ class Home extends Component {
       <div className="projects section">
         <h2>Projects</h2>
         <div className="projects-carousel-container">
-          <FontAwesomeIcon icon={faAngleLeft} role="button" tabIndex="0" className="icon prev" />
+          <FaAngleLeft className="icon prev" />
           <div className="container">
             <div className="carousel">
               <div className="item a">
@@ -478,7 +473,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <FontAwesomeIcon icon={faAngleRight} role="button" tabIndex="0" className="icon next" />
+          <FaAngleRight className="icon next" />
         </div>
         <div className="arrow-container">
           <Link

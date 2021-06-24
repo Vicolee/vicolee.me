@@ -106,7 +106,7 @@ class Home extends Component {
       <div id="profile-section">
         <div>
           <div id="profile-picture-container">
-            <img src="src/images/vico_lee.jpg" alt="profile" id="profile-image" />
+            <img src="https://i.ibb.co/B4GQ38N/vico-lee.jpg" alt="profile" id="profile-image" />
             <div>
               <h1>Vico Lee</h1>
               <p>Dartmouth College (2020-2024)</p>
@@ -373,7 +373,7 @@ class Home extends Component {
           <div className="container">
             <div className="carousel">
               <div className="item a">
-                <img src="src/images/coinhako.gif" alt="coinhako" />
+                <img src="https://i.postimg.cc/fkzM9y3D/coinhako.gif" alt="coinhako" />
                 <a href="https://github.com/Vicolee/news-telegram-bot">
                   <div className="project-description">
                     <h3>Coinhako Internship</h3>
@@ -389,7 +389,7 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item b">
-                <img src="src/images/dso.png" alt="dso" />
+                <img src="https://i.ibb.co/FsLMFj9/dso.png" alt="dso" />
                 <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
                   <div className="project-description">
                     <h3>
@@ -408,7 +408,7 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item c">
-                <img src="src/images/cisco.gif" alt="recycle app" />
+                <img src="https://i.postimg.cc/FYcMqXfT/cisco.gif" alt="recycle app" />
                 <a href="https://github.com/Vicolee/recycle-mobile-app">
                   <div className="project-description">
                     <h3>Cisco Webex Hackathon 2020</h3>
@@ -423,7 +423,7 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item d">
-                <img src="src/images/ibm.png" alt="ibm" />
+                <img src="https://i.ibb.co/X4y7wRT/ibm.png" alt="ibm" />
                 <a href="https://github.com/Vicolee/chinese-restaurants-new-york">
                   <div className="project-description">
                     <h3>IBM Data Science Professional Certificate</h3>
@@ -440,7 +440,7 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item e">
-                <img src="src/images/lynch_rocket_lab.jpeg" alt="lynch rocket lab" />
+                <img src="https://i.ibb.co/grymn7W/lynch-rocket-lab.jpg" alt="lynch rocket lab" />
                 <a href="https://sites.dartmouth.edu/lynch-rocket-lab/">
                   <div className="project-description">
                     <h3>Lynch Rocket Lab, Dartmouth</h3>
@@ -456,7 +456,7 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item f">
-                <img src="src/images/resumov.gif" alt="resumov" />
+                <img src="https://i.ibb.co/Mk53BF6/resumov.gif" alt="resumov" />
                 <a href="https://github.com/dartmouth-cs52-21S/project-access">
                   <div className="project-description">
                     <h3>Resumov</h3>

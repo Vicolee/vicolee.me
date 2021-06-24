@@ -8,14 +8,14 @@ import '../styles/style.scss';
 import '../styles/home.scss';
 import $ from 'jquery';
 import {
-  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaTrophy, FaRegFileAlt, FaRegFileCode,
+  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaRegFileCode,
 } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import OnVisible from 'react-on-visible';
-import {
-  NavLink,
-} from 'react-router-dom';
+// import {
+//   NavLink,
+// } from 'react-router-dom';
 
 class Home extends Component {
   constructor(props) {
@@ -194,9 +194,9 @@ class Home extends Component {
                 <p>
                   Coinhako,
                   <em>&nbsp;Singapore</em>
-                  <NavLink to="/files/coinhako_testimonial">
+                  {/* <NavLink to="/files/coinhako_testimonial">
                     <FaTrophy className="work-icon testimonial" />
-                  </NavLink>
+                  </NavLink> */}
                   <a href="https://github.com/Vicolee/news-telegram-bot">
                     <FaRegFileCode className="work-icon" />
                   </a>
@@ -223,9 +223,9 @@ class Home extends Component {
                 <p>
                   DSO National Laboratories,
                   <em>&nbsp;Singapore</em>
-                  <NavLink to="/files/dso_internship_report">
+                  {/* <NavLink to="/files/dso_internship_report">
                     <FaRegFileAlt className="work-icon" />
-                  </NavLink>
+                  </NavLink> */}
                   <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
                     <FaRegFileCode className="work-icon" />
                   </a>

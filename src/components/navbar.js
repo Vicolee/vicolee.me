@@ -10,7 +10,6 @@ import {
   NavLink, withRouter,
 } from 'react-router-dom';
 import { Link } from 'react-scroll';
-// import $ from 'jquery';
 
 class NavBar extends Component {
   constructor(props) {
@@ -53,32 +52,32 @@ class NavBar extends Component {
           >
             <span id="extracurriculars">Extracurriculars</span>
           </Link>
-          {/* <NavLink exact to="/files/resume"><span>Resume</span></NavLink> */}
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
+          {/* <NavLink exact to="/resume"><span>Resume</span></NavLink> */}
         </nav>
       );
     } else if (this.props.history.location.pathname === '/files/resume') {
       return (
         <nav>
           <NavLink exact to="/"><span>Home</span></NavLink>
-          {/* <NavLink exact to="/files/resume"><span>Resume</span></NavLink> */}
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
+          {/* <NavLink exact to="/resume"><span>Resume</span></NavLink> */}
         </nav>
       );
     } else if (this.props.history.location.pathname.includes('/files')) {
       return (
         <nav>
           <NavLink exact to="/"><span>Home</span></NavLink>
-          {/* <NavLink exact to="/files/resume"><span>Resume</span></NavLink> */}
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
+          {/* <NavLink exact to="/resume"><span>Resume</span></NavLink> */}
         </nav>
       );
     } else if (this.props.history.location.pathname === '/resume') {
       return (
         <nav>
           <NavLink exact to="/"><span>Home</span></NavLink>
-          {/* <NavLink exact to="/files/resume"><span>Resume</span></NavLink> */}
-          <NavLink exact to="/resume"><span>Resume</span></NavLink>
+          <NavLink exact to="/files/resume"><span>Resume</span></NavLink>
+          {/* <NavLink exact to="/resume"><span>Resume</span></NavLink> */}
         </nav>
       );
     } else {

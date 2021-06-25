@@ -1,3 +1,6 @@
+/* eslint-disable quotes */
+/* eslint-disable quote-props */
+/* eslint-disable camelcase */
 /* eslint-disable no-shadow */
 /* eslint-disable prefer-spread */
 /* eslint-disable react/destructuring-assignment */
@@ -7,23 +10,32 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import resume from '../files/resume.pdf';
+import dso_internship_report from '../files/dso_internship_report.pdf';
+import coinhako_testimonial from '../files/coinhako_testimonial.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function File(props) {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const dict = {
+    resume,
+    coinhako_testimonial,
+    dso_internship_report,
+  };
 
   function onDocumentLoadSuccess(numPages) {
     setNumPages(numPages);
   }
 
+  console.log(props.match.params.filename);
+
   return (
     <div className="file">
       <br />
       <Document
-        file="https://static1.squarespace.com/static/5c0ee8ceaa49a1ceb598befc/t/5f59921800cf8679baf2fa5d/1599705624520/Resume_Kathy+Dong.pdf"
-        // file={`/src/files/${props.match.params.filename}.pdf`}
+        file={dict[props.match.params.filename]}
         onLoadSuccess={({ numPages }) => { onDocumentLoadSuccess(numPages); }}
         renderAnnotationLayer="false"
         className="document"

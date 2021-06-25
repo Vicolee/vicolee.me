@@ -8,14 +8,20 @@ import '../styles/style.scss';
 import '../styles/home.scss';
 import $ from 'jquery';
 import {
-  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaRegFileCode,
+  FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaRegFileCode, FaTrophy, FaRegFileAlt,
 } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import OnVisible from 'react-on-visible';
-// import {
-//   NavLink,
-// } from 'react-router-dom';
+import {
+  NavLink,
+} from 'react-router-dom';
+import coinhako from '../images/coinhako.gif';
+import cisco from '../images/cisco.gif';
+// import dso from '../images/dso.png';
+// import ibm from '../images/ibm.png';
+import resumov from '../images/resumov.gif';
+// import lynchRocketLab from '../images/lynch_rocket_lab.jpeg';
 
 class Home extends Component {
   constructor(props) {
@@ -194,9 +200,9 @@ class Home extends Component {
                 <p>
                   Coinhako,
                   <em>&nbsp;Singapore</em>
-                  {/* <NavLink to="/files/coinhako_testimonial">
+                  <NavLink to="/files/coinhako_testimonial">
                     <FaTrophy className="work-icon testimonial" />
-                  </NavLink> */}
+                  </NavLink>
                   <a href="https://github.com/Vicolee/news-telegram-bot">
                     <FaRegFileCode className="work-icon" />
                   </a>
@@ -223,9 +229,9 @@ class Home extends Component {
                 <p>
                   DSO National Laboratories,
                   <em>&nbsp;Singapore</em>
-                  {/* <NavLink to="/files/dso_internship_report">
+                  <NavLink to="/files/dso_internship_report">
                     <FaRegFileAlt className="work-icon" />
-                  </NavLink> */}
+                  </NavLink>
                   <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
                     <FaRegFileCode className="work-icon" />
                   </a>
@@ -373,7 +379,8 @@ class Home extends Component {
           <div className="container">
             <div className="carousel">
               <div className="item a">
-                <img src="https://i.postimg.cc/fkzM9y3D/coinhako.gif" alt="coinhako" />
+                {/* <img src="https://i.postimg.cc/fkzM9y3D/coinhako.gif" alt="coinhako" /> */}
+                <img src={coinhako} alt="coinhako" />
                 <a href="https://github.com/Vicolee/news-telegram-bot">
                   <div className="project-description">
                     <h3>Coinhako Internship</h3>
@@ -390,6 +397,7 @@ class Home extends Component {
               </div>
               <div className="item b">
                 <img src="https://i.ibb.co/FsLMFj9/dso.png" alt="dso" />
+                {/* <img src={dso} alt="dso" /> */}
                 <a href="https://github.com/Vicolee/Artificial-Intelligence-Playground/tree/master/Fairness-GAN">
                   <div className="project-description">
                     <h3>
@@ -408,7 +416,8 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item c">
-                <img src="https://i.postimg.cc/FYcMqXfT/cisco.gif" alt="recycle app" />
+                {/* <img src="https://i.postimg.cc/FYcMqXfT/cisco.gif" alt="recycle app" /> */}
+                <img src={cisco} alt="recycle app" />
                 <a href="https://github.com/Vicolee/recycle-mobile-app">
                   <div className="project-description">
                     <h3>Cisco Webex Hackathon 2020</h3>
@@ -424,6 +433,7 @@ class Home extends Component {
               </div>
               <div className="item d">
                 <img src="https://i.ibb.co/X4y7wRT/ibm.png" alt="ibm" />
+                {/* <img src={ibm} alt="ibm" /> */}
                 <a href="https://github.com/Vicolee/chinese-restaurants-new-york">
                   <div className="project-description">
                     <h3>IBM Data Science Professional Certificate</h3>
@@ -441,6 +451,7 @@ class Home extends Component {
               </div>
               <div className="item e">
                 <img src="https://i.ibb.co/grymn7W/lynch-rocket-lab.jpg" alt="lynch rocket lab" />
+                {/* <img src={lynchRocketLab} alt="lynch rocket lab" /> */}
                 <a href="https://sites.dartmouth.edu/lynch-rocket-lab/">
                   <div className="project-description">
                     <h3>Lynch Rocket Lab, Dartmouth</h3>
@@ -456,7 +467,8 @@ class Home extends Component {
                 </a>
               </div>
               <div className="item f">
-                <img src="https://i.ibb.co/Mk53BF6/resumov.gif" alt="resumov" />
+                {/* <img src="https://i.ibb.co/Mk53BF6/resumov.gif" alt="resumov" /> */}
+                <img src={resumov} alt="resumov" />
                 <a href="https://github.com/dartmouth-cs52-21S/project-access">
                   <div className="project-description">
                     <h3>Resumov</h3>

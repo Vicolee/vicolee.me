@@ -27,7 +27,6 @@ class App extends Component {
           <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            {/* <Route path="/resume" component={Resume} /> */}
             <Route path="/files/:filename" component={File} />
             <Route path="/resume" component={Resume} />
           </Switch>

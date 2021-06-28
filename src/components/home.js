@@ -112,7 +112,7 @@ class Home extends Component {
       <div id="profile-section">
         <div>
           <div id="profile-picture-container">
-            <img src="https://i.ibb.co/B4GQ38N/vico-lee.jpg" alt="profile" id="profile-image" />
+            <img src="https://i.ibb.co/B4GQ38N/vico-lee.jpg" alt="Vico Lee" id="profile-image" />
             <div>
               <h1>Vico Lee</h1>
               <p>Dartmouth College (2020-2024)</p>

@@ -527,3 +527,26 @@ h3 {
       width: 75%;
     }
 }
+
+.skill-row-percent-ruby {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    width: 65%;
+    background: #d63c3c;
+    &.visible {
+        animation: fill-ruby 1.5s ease-in-out;
+    }
+}
+
+@keyframes fill-ruby {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 65%;
+    }
+}

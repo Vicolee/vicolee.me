@@ -96,10 +96,17 @@ class Home extends Component {
             percent={30}
           />
         </div>
-        <h3>Web Development: JavaScript/HTML/CSS/React</h3>
+        <h3>Full Stack Web Development: JavaScript/HTML/CSS</h3>
         <div className="skill-row">
           <OnVisible
             className="skill-row-percent-web"
+            percent={30}
+          />
+        </div>
+        <h3>Ruby / Ruby on Rails</h3>
+        <div className="skill-row">
+          <OnVisible
+            className="skill-row-percent-ruby"
             percent={30}
           />
         </div>
@@ -345,6 +352,26 @@ class Home extends Component {
               </li>
             </ul>
           </div>
+        </OnVisible>
+        <OnVisible
+          className="resume-experience"
+          percent={20}
+        >
+          <div className="title-container">
+            <div>
+              <p>
+                International Student Association,
+                <em>&nbsp;Dartmouth College</em>
+              </p>
+              <p>June 2021 - Present</p>
+            </div>
+            <p>Head Secretary</p>
+          </div>
+          <ul>
+            <li>
+              As part of the executive committee, I lead advocacy movements for Dartmouth's international students.
+            </li>
+          </ul>
         </OnVisible>
         <OnVisible
           className="resume-experience"

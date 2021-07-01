@@ -164,7 +164,7 @@ class Home extends Component {
               </div>
               <ul>
                 <li>
-                  E.E Just Summer Intern program is a special program at Dartmouth aimed at increasing interest in STEM fields among underrepresented groups.
+                  E.E Just Summer Intern program is a scholar program at Dartmouth aimed at increasing interest in STEM fields among underrepresented groups.
                 </li>
                 <li>
                   Conducting research to optimize information transmitted between robots underwater using 3D simulations like Gazebo.

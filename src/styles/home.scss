@@ -13,7 +13,7 @@
 
 .profile {
     width: 40%;
-    border-right: 1px solid #682ae9;
+    border-right: 1px solid #f1f2f3;
     background-color: #252734;
     z-index: 100;
 }
@@ -148,6 +148,11 @@
     border-radius: 5px;
     margin-top: 2px;
     margin-left: 10px;
+    color: #22DD22;
+}
+
+.work-icon path {
+    stroke-width: -1px;
 }
 
 .work-icon:hover {
@@ -156,6 +161,7 @@
     -webkit-animation: shake 1s ease infinite;
     -moz-animation: shake 1s ease infinite;
     animation: shake 1s ease infinite;
+    // color: #22DD2;
 }
 
 
@@ -433,7 +439,7 @@ h3 {
 }
 
 .resume-experience {
-    border-bottom: 1px solid #682ae9;
+    // border-bottom: 1px solid #682ae9;
     transition: transform 3s, opacity 3s;
     transform: translateY(25px);
     opacity: 0;
@@ -442,6 +448,8 @@ h3 {
       transform: translateY(0);
       opacity: 1;
     }
+    
+    margin-bottom: 40px;
 }
 
 .skills-section h3{

@@ -28,7 +28,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/files/:filename" component={File} />
-            {/* <Route path="/resume" component={Resume} /> */}
           </Switch>
         </Router>
       </div>

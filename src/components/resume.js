@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
+import resume from '../images/vico_lee_resume.png';
 
 class Resume extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Resume extends Component {
   render() {
     return (
       <div className="resume-page">
-        <img src="https://i.ibb.co/18XsNmT/resume.png" alt="resume" className="resume" />
+        <img src={resume} alt="resume" className="resume" />
       </div>
     );
   }

@@ -11,7 +11,7 @@ import {
 import NavBar from './navbar';
 import Home from './home';
 import File from './file';
-import Resume from './resume';
+// import Resume from './resume';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/files/:filename" component={File} />
-            <Route path="/resume" component={Resume} />
+            {/* <Route path="/resume" component={Resume} /> */}
           </Switch>
         </Router>
       </div>

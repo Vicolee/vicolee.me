@@ -10,13 +10,13 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-import resume from '../files/resume.pdf';
+import resume from '../files/vico_lee_resume.pdf';
 import dso_internship_report from '../files/dso_internship_report.pdf';
 import coinhako_testimonial from '../files/coinhako_testimonial.pdf';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function File(props) {
+const File = (props) => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const dict = {
@@ -44,7 +44,7 @@ function File(props) {
           .map((x, i) => i + 1)
           .map((page) => {
             return (
-              <div>
+              <div key={page}>
                 <Page pageNumber={page} className="page" />
                 <br />
               </div>
@@ -53,6 +53,6 @@ function File(props) {
       </Document>
     </div>
   );
-}
+};
 
 export default File;

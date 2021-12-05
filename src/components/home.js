@@ -3,9 +3,9 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable react/jsx-filename-extension */
-import React, { Component } from 'react';
 import '../styles/style.scss';
 import '../styles/home.scss';
+import React, { useEffect } from 'react';
 import $ from 'jquery';
 import {
   FaFacebookSquare, FaInstagram, FaGithub, FaLinkedin, FaAngleDoubleDown, FaAngleRight, FaAngleLeft, FaRegFileCode, FaTrophy, FaRegFileAlt,
@@ -21,16 +21,9 @@ import cisco from '../images/cisco.gif';
 // import dso from '../images/dso.png';
 // import ibm from '../images/ibm.png';
 import resumov from '../images/resumov.gif';
-// import lynchRocketLab from '../images/lynch_rocket_lab.jpeg';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  componentDidMount = () => {
+const Home = (props) => {
+  useEffect(() => {
     const carousel = $('.carousel');
     let currdeg = 0;
 
@@ -50,9 +43,9 @@ class Home extends Component {
     }
     $('.next').on('click', { d: 'n' }, rotate);
     $('.prev').on('click', { d: 'p' }, rotate);
-  }
+  }, []);
 
-  displayContactMe = () => {
+  const displayContactMe = () => {
     return (
       <div className="contact-container">
         {/* <h2>Contact Me</h2> */}
@@ -76,9 +69,9 @@ class Home extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  displaySkills = () => {
+  const displaySkills = () => {
     return (
       <div className="skills-section">
         <h2>Skills</h2>
@@ -112,9 +105,9 @@ class Home extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  displayProfile = () => {
+  const displayProfile = () => {
     return (
       <div id="profile-section">
         <div>
@@ -127,22 +120,22 @@ class Home extends Component {
             </div>
           </div>
           <div>
-            I am a Computer Science and Mathematics double major at Dartmouth College. I am an aspiring software engineer, data scientist, and entrepreneur.
-            Outside of classes, I participate in hackathons and pitch competitions. I am an independent learner and believe strongly in effective communication.
-            Beyond these, I love playing sports, especially volleyball and frisbee!
+            I am a sophomore at Dartmouth College, double majoring in Computer Science and Mathematics.
+            My passion lies in software engineering, data science, machine learning, tech and startups.
+            Outside of classes, I participate in hackathons and pitch competitions. I also enjoy working on personal projects and
+            meeting new people.
           </div>
           <br />
           <div>
-            Feel free to reach out to me if you want to work on projects together, play some sports together, or even just
-            to grab a cup of coffee!
+            Feel free to reach out to me to talk about anything!
           </div>
         </div>
-        {this.displaySkills()}
+        {displaySkills()}
       </div>
     );
-  }
+  };
 
-  displayWork = () => {
+  const displayWork = () => {
     return (
       <div className="work-experiences section">
         <div className="work-experiences-container">
@@ -155,19 +148,19 @@ class Home extends Component {
               <div className="title-container">
                 <div>
                   <p>
-                    Reality and Robotics Lab,
-                    <em>&nbsp;Hanover, NH</em>
+                    Crimson Education,
+                    <em>&nbsp;San Francisco, CA</em>
                   </p>
-                  <p>June 2021 - Present</p>
+                  <p>July 2021 - September 2021</p>
                 </div>
-                <p>E.E. Just Summer Intern</p>
+                <p>Data Science Intern</p>
               </div>
               <ul>
                 <li>
-                  E.E Just Summer Intern program is a scholar program at Dartmouth aimed at increasing interest in STEM fields among underrepresented groups.
+                  Worked directly under the Chief Operating Officer to run business health analysis and data analysis for 20+ offices globally.
                 </li>
                 <li>
-                  Conducting research to optimize information transmitted between robots underwater using 3D simulations like Gazebo.
+                  Developed SQL queries to join 10+ data collections and parse 1,000,000+ user reviews to evaluate 600+ employees’ KPIs.
                 </li>
               </ul>
             </div>
@@ -185,15 +178,17 @@ class Home extends Component {
                   </p>
                   <p>October 2020 - February 2021</p>
                 </div>
-                <p>Machine Learning Research Intern</p>
+                <p>Data Science Research Assistant</p>
               </div>
               <ul>
                 <li>
-                  Conducted research on machine learning tools like edge detection neural networks to extract features
-                  of the northern lights’ plasma waves.
+                  Created a tool to automate the comparison of northern light images by quantifying features such as degree of curvature.
                 </li>
                 <li>
-                  Studied metrics for comparing plasma flow data collected from different satellite positions.
+                  Boosted existing edge detection algorithm’s accuracy by 100% and decreased image noise by 80%, reducing overall human supervision by 80%.
+                </li>
+                <li>
+                  Overarching project was selected by NASA as a top 4 candidate for future space missions.
                 </li>
               </ul>
             </div>
@@ -220,10 +215,10 @@ class Home extends Component {
             </div>
             <ul>
               <li>
-                Led the design of a telegram chatbot using Ruby on Rails web framework on Postgresql database in a Linux Server.
+                Designed and deployed a Telegram chatbot in a Linux Server using Ruby on Rails web framework and Postgresql database.
               </li>
               <li>
-                Deployed a chatbot that scrapes and centralizes crypto news sources, sending users relevant crypto trading news updates.
+                Chatbot automatically compiles news from 10+ reliable sources and creates personalized feeds for 12,000+ traders.
               </li>
             </ul>
           </OnVisible>
@@ -249,11 +244,14 @@ class Home extends Component {
             </div>
             <ul>
               <li>
-                Researched on the use of Generative Adversarial Networks (GANs) to generate de-biased data that optimizes a fairness criterion, reducing machine algorithms’
-                discrimination towards certain groups of people.
+                Researched the generation of de-biased datasets with
+                Generative Adversarial Networks built using Tensorflow.
               </li>
               <li>
-                Learned to navigate Linux server, and trained models using Tensorflow and Keras.
+                Trained model to gauge faces’ attractiveness independent of features like skin color and gender.
+              </li>
+              <li>
+                Created image-cropping algorithm to pre-process 200,000+ celebrity images.
               </li>
             </ul>
           </OnVisible>
@@ -296,9 +294,9 @@ class Home extends Component {
       </div>
 
     );
-  }
+  };
 
-  displayExtracurriculars = () => {
+  const displayExtracurriculars = () => {
     return (
       <div className="extracurriculars section">
         <OnVisible
@@ -315,15 +313,14 @@ class Home extends Component {
                 </p>
                 <p>December 2020 - Present</p>
               </div>
-              <p>Founder</p>
+              <p>Founder & Chairperson</p>
             </div>
             <ul>
               <li>
-                Founded a program with the Magnuson Center for Entrepreneurship at Dartmouth that organizes a new kind of competition where teams are given 4 months to build a
-                startup from scratch.
+                Founded a club of 10 that organizes lean startup competitions, raising $5,000 of initial funding in the process.
               </li>
               <li>
-                Spearheading sponsorship, marketing, club recruitment, technical workshops, and competition planning efforts.
+                Spearheading sponsorship, marketing, club recruitment, and workshop planning efforts in collaboration with 10+ clubs.
               </li>
             </ul>
           </div>
@@ -345,10 +342,10 @@ class Home extends Component {
             </div>
             <ul>
               <li>
-                Leading a team of 10 to secure sponsorships from software firms for 600+ participants worldwide.
+                Led 10 club members to secure $15,000 worth of sponsorship prizes from software firms for 600+ participants worldwide.
               </li>
               <li>
-                Responsible for holding workshops on campus to teach beginner developers languages like JavaScript, HTML, and CSS.
+                Organized workshops on campus to teach beginner developers JavaScript, HTML, and CSS, etc.
               </li>
             </ul>
           </div>
@@ -395,9 +392,9 @@ class Home extends Component {
         </OnVisible>
       </div>
     );
-  }
+  };
 
-  displayProjects = () => {
+  const displayProjects = () => {
     return (
       <div className="projects section">
         <h2>Projects</h2>
@@ -466,12 +463,15 @@ class Home extends Component {
                     <h3>IBM Data Science Professional Certificate</h3>
                     <p>
                       Conducted data analysis to predict prime venues in New York for setting up Chinese restaurants using
-                      machine learning algorithms like K Nearest Neighbors, Decision Tree, Support Vector Machine,
+                      Scikit-learn machine learning models like K Nearest Neighbors, Decision Tree, Support Vector Machine,
                       and Logistic Regression.
                     </p>
                     <p>
-                      Used Foursquare API to scrape data like number of likes for a venue and one hot encoded their surrounding
-                      venues as a feature vector.
+                      Scraped data on existing Chinese restaurants in New York using the Foursquare API and trained machine
+                      models to identify crucial venues like tourist attractions that contribute to a restaurant’s popularity.
+                    </p>
+                    <p>
+                      Used Python, Matplotlib, and Pandas to create a data visualization of the 160 ideal locations as predicted by the model.
                     </p>
                   </div>
                 </a>
@@ -528,35 +528,33 @@ class Home extends Component {
         </div>
       </div>
     );
-  }
+  };
 
-  displayMain = () => {
+  const displayMain = () => {
     return (
       <div id="main-section">
-        {this.displayProjects()}
-        {this.displayWork()}
-        {this.displayExtracurriculars()}
+        {displayProjects()}
+        {displayWork()}
+        {displayExtracurriculars()}
       </div>
     );
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <div className="home">
-          <div className="profile">
-            <div className="profile-container">
-              {this.displayProfile()}
-            </div>
-            {this.displayContactMe()}
+  return (
+    <div>
+      <div className="home">
+        <div className="profile">
+          <div className="profile-container">
+            {displayProfile()}
           </div>
-          <div className="main-container">
-            {this.displayMain()}
-          </div>
+          {displayContactMe()}
+        </div>
+        <div className="main-container">
+          {displayMain()}
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Home;
